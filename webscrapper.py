@@ -1,6 +1,8 @@
 from bs4 import BeautifulSoup as soup
 from urllib.request import urlopen as uReq
 
+PIRATE_LINKS = False
+
 def main():
     tester = input("Search the seven seas: ")
     x = search(tester)
@@ -33,7 +35,8 @@ def search(query):
     searchTitle = souped.findAll("div",{"class":"detName"})
     searchSeeders = souped.findAll("td",{"align":"right"})
     searchSize = souped.findAll("font",{"class":"detDesc"})
-
+    searchLink = souped.findAll("a",{"title":"Download this torrent using magnet"})
+        
     # name and open csv for writing
     # filename = "movies.csv"
     # f = open(filename, "w")
@@ -49,6 +52,12 @@ def search(query):
         seeders = searchSeeders[i*2].string
         leechers = searchSeeders[i].string
         magnet = searchTitle[i].a["href"]
+
+        # determine wether urls or magnet links
+        if PIRATE_LINKS:
+            magnet = searchTitle[i].a["href"]
+        else:  
+            magnet =searchLink[i]["href"]
 
         # get size
         size = ""
