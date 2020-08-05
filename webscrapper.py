@@ -22,7 +22,8 @@ def search(query):
             url += word
         else:
             url += word + "%20"
-
+    url += '/1/99/100,200,300,400,600'
+    
     # open connection and grab page
     client = uReq(url)
     html = client.read()
