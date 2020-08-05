@@ -23,7 +23,7 @@ def search(query):
         else:
             url += word + "%20"
     url += '/1/99/100,200,300,400,600'
-    
+
     # open connection and grab page
     client = uReq(url)
     html = client.read()
@@ -51,7 +51,7 @@ def search(query):
         # normalize searches
         title = searchTitle[i].a["title"][len("details for "):]
         seeders = searchSeeders[i*2].string
-        leechers = searchSeeders[i].string
+        leechers = searchSeeders[i*2+1].string
         magnet = searchTitle[i].a["href"]
 
         # determine wether urls or magnet links
