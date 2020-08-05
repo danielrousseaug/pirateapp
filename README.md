@@ -5,7 +5,7 @@ pirateapp is a webscrapper that gathers and organizes relevant information from 
 ```
 $ python pirateapp.py
 ```
-![alt text](https://i.imgur.com/5RmqZrL.png)
+![alt text](https://i.imgur.com/lxSse8n.png?1)
 
 ## Contributing
 Pull requests are welcome
