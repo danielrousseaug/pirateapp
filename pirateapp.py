@@ -51,19 +51,19 @@ label = tk.Label(lower_frame, bg="#000000", justify='left', bd='0', anchor="nw",
 label.place(relwidth=1, relheight=1)
 
 # download buttons
-button1 = tk.Button(root, cursor="dot", text="Download 1", activebackground="#FFFFFF", background="#000000",foreground="#FFFFFF", bd="0", command=lambda: linkopen(entry.get(), 1) )
+button1 = tk.Button(root, cursor="dot", text="Download 1", activebackground="#FFFFFF", background="#000000",foreground="#FFFFFF", bd="0", command=lambda: linkopen(entry.get(), 0) )
 button1.place(relheight=0.1, relwidth=0.125, relx=0.875, rely=0.25)
 
-button2 = tk.Button(root, cursor="dot", text="Download 2", activebackground="#FFFFFF", background="#000000",foreground="#FFFFFF", bd="0", command=lambda: linkopen(entry.get(), 2))
+button2 = tk.Button(root, cursor="dot", text="Download 2", activebackground="#FFFFFF", background="#000000",foreground="#FFFFFF", bd="0", command=lambda: linkopen(entry.get(), 1))
 button2.place(relheight=0.1, relwidth=0.125, relx=0.875, rely=0.35)
 
-button3 = tk.Button(root, cursor="dot", text="Download 3", activebackground="#FFFFFF", background="#000000",foreground="#FFFFFF", bd="0", command=lambda: linkopen(entry.get(), 3))
+button3 = tk.Button(root, cursor="dot", text="Download 3", activebackground="#FFFFFF", background="#000000",foreground="#FFFFFF", bd="0", command=lambda: linkopen(entry.get(), 2))
 button3.place(relheight=0.1, relwidth=0.125, relx=0.875, rely=0.45)
 
-button4 = tk.Button(root, cursor="dot", text="Download 4", activebackground="#FFFFFF", background="#000000",foreground="#FFFFFF", bd="0", command=lambda: linkopen(entry.get(), 4))
+button4 = tk.Button(root, cursor="dot", text="Download 4", activebackground="#FFFFFF", background="#000000",foreground="#FFFFFF", bd="0", command=lambda: linkopen(entry.get(), 3))
 button4.place(relheight=0.1, relwidth=0.125, relx=0.875, rely=0.55)
 
-button4 = tk.Button(root, cursor="dot", text="Download 5", activebackground="#FFFFFF", background="#000000",foreground="#FFFFFF", bd="0", command=lambda: linkopen(entry.get(), 5))
+button4 = tk.Button(root, cursor="dot", text="Download 5", activebackground="#FFFFFF", background="#000000",foreground="#FFFFFF", bd="0", command=lambda: linkopen(entry.get(), 4))
 button4.place(relheight=0.1, relwidth=0.125, relx=0.875, rely=0.65)
 
 
