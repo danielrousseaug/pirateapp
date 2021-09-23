@@ -15,7 +15,7 @@ def linkopen(var, num):
 
 # innit tkinter
 root = tk.Tk()
-root.attributes('-alpha', 0.85)
+root.attributes('-alpha', 0.92)
 
 # bckg color
 color = tk.Label(root, background='#000000')

@@ -1,5 +1,8 @@
 from bs4 import BeautifulSoup as soup
 from urllib.request import urlopen as uReq
+from urllib.request import Request
+import ssl
+
 
 PIRATE_LINKS = False
 
@@ -25,7 +28,18 @@ def search(query):
     url += '/1/99/100,200,300,400,600'
 
     # open connection and grab page
-    client = uReq(url)
+    context = ssl._create_unverified_context()
+
+    req = Request(
+        url, 
+        data=None, 
+        headers={
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36'
+        }
+    )
+    client = uReq(req,context=context)
+
+
     html = client.read()
     client.close()
 
